@@ -1,0 +1,18 @@
+<project default="compile">
+	<path id="classpath">
+		<fileset dir="libs" includes="*.jar"/>
+		<pathelement location="bin"/>
+	</path>
+	<target name="compile">
+		<mkdir dir="bin"/>
+		<javac srcdir="src" destdir="bin" classpathref="classpath" includeantruntime="false"/>
+	</target>
+	<target name="test" depends="compile">
+		<junit>
+			<classpath refid="classpath"/>
+			<batchtest>
+				<fileset dir="src" includes="kr/KENNYSOFT/SEHomework/SETest/*.java"/>
+			</batchtest>
+		</junit>
+	</target>
+</project>
