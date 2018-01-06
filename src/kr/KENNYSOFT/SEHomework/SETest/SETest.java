@@ -53,4 +53,12 @@ public class SETest
 
 		new OperatorFactory(functions);
 	}
+
+	@Test
+	public void testCreateAdder()
+	{
+		Assert.assertNotNull(factory);
+		Operator adder = factory.create("Add");
+		Assert.assertNotNull(adder);
+	}
 }
