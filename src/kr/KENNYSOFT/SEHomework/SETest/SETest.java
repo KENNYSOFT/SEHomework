@@ -61,4 +61,12 @@ public class SETest
 		Operator adder = factory.create("Add");
 		Assert.assertNotNull(adder);
 	}
+
+	@Test
+	public void testCreateSubtractor()
+	{
+		Assert.assertNotNull(factory);
+		Operator subtractor = factory.create("Subtract");
+		Assert.assertNotNull(subtractor);
+	}
 }
