@@ -12,20 +12,20 @@ public class SubtractorTest
 	public void testSubtractNormalInt()
 	{
 		Operator subtractor = new Subtractor();
-		Assert.assertEquals(subtractor.operate(1, 2), "-1");
+		Assert.assertEquals("-1", subtractor.operate(1, 2));
 	}
 
 	@Test
 	public void testSubtractLargeInt()
 	{
 		Operator subtractor = new Subtractor();
-		Assert.assertEquals(subtractor.operate(2147483647, 2100000000), "47483647");
+		Assert.assertEquals("47483647", subtractor.operate(2147483647, 2100000000));
 	}
 
 	@Test
 	public void testSubtractLargeString()
 	{
 		Operator subtractor = new Subtractor();
-		Assert.assertEquals(subtractor.operate("9223372036854775808", "18446744073709551616"), "-9223372036854775808");
+		Assert.assertEquals("-9223372036854775808", subtractor.operate("9223372036854775808", "18446744073709551616"));
 	}
 }
