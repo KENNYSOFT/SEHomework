@@ -5,3 +5,6 @@
 
 ### Test ###
 - `ant test`
+
+### Run ###
+- `java -cp bin;libs/* kr.KENNYSOFT.SEHomework.SEHomework`
